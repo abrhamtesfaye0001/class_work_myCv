@@ -22,26 +22,27 @@
     <table cellspacing="20">
         <tr>
             <td><label for="fName">First Name :</label></td>
-            <td><input type="text" required minlength="1" name="fName" id="fName">
+            <td><input type="text" required minlength="1" maxlength="32" pattern="[A-Za-z]{1,32}" name="fName" id="fName">
                 <br>
             </td>
         </tr>
 
         <tr>
             <td><label for="lName">Last Name : </label></td>
-            <td><input type="text" required minlength="1" name="lName" id="lName">
+                <td><input type="text" required minlength="1" maxlength="32" pattern="[A-Za-z]{1,32}" name="lName" id="lName">
+                
                 <br>
             </td>
         </tr>
 
         <tr>
             <td><label for="password">Password</label></td>
-            <td><input type="password" required minlength="8" name="password" id="password"></td>
+            <td><input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" required minlength="8" name="password" id="password"></td>
         </tr>
         <tr>
             <td>Sex: </td>
-            <td>Male: <input type="checkbox">
-            Female: <input type="checkbox"></td>
+            <td>Male: <input type="checkbox" value="male">
+            Female: <input type="checkbox" value="female"></td>
         </tr>
         <tr>
             <td>Age:</td>
@@ -53,7 +54,7 @@
         </tr>
         <tr>
             <td><label for="email">Email: </label></td>
-            <td><input type="email" name="email" id="email">
+            <td><input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email" name="email" id="email">
             </td>
         </tr>
         <tr>
